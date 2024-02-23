@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;  */
+    margin: 0;
+}
+
+.one, .two {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.one {
+    background: linear-gradient(gray,white);
+    h1{
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+   h2{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+   }
+    
+}
+
+.two {
+    background: rgb(141, 109, 109);
+    top: 100vh; 
+}
