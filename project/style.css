@@ -1,0 +1,49 @@
+@import url(https://db.onlinewebfonts.com/c/51b04fd198be8867df5092074251bb22?family=Apple+Garamond+Book);
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.one, .two, .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.one {
+    background-color: blue;
+}
+
+.two {
+    background-color: red;
+}
+
+.three {
+    background-color: yellow;
+}
+
+h1 {
+    font-family: 'helvetica', sans-serif;
+    letter-spacing: -15px;
+    font-weight: 500;
+    font-size: 120px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Apple Garamond', serif;
+    font-weight: 300;
+    font-size: 30px;
+    font-style: italic;
+    letter-spacing: -0.5px;
+}

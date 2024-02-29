@@ -27,6 +27,11 @@ a {
     color: white;
 }
 
+a:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
 .container {
     text-align: center;
 }

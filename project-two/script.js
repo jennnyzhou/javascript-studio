@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
-    const audio = new Audio('1994.mp3'); 
+    const audio = new Audio('time.mp3'); 
+    
 
 
     const enterLink = document.getElementById('enterLink');
@@ -9,8 +10,5 @@ $(document).ready(function() {
         audio.play();
     });
 
-
-    $('.one').on('load', function() {
-        audio.play();
-    });
 });
+
