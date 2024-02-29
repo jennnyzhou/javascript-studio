@@ -11,10 +11,44 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    /* height: 100vh;  */
     margin: 0;
+    overflow: hidden;
 }
 
+#loom-companion-mv3 {
+    display: none;
+}
+
+#shadow-host-companion {
+    display: none;
+}
+
+#liecbddmkiiihnedobmlmillhodjkdmb {
+    display: none;
+}
+
+.open {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 5vh;
+    left:30vw;
+    transition: 1s;
+
+}
+
+#home {
+    width: 50vw;
+    height: auto;
+}
+
+#home:hover {
+    animation: shake 0.3s linear infinite alternate-reverse;
+}
 
 a {
     text-decoration: none;
@@ -34,6 +68,10 @@ a:hover {
 
 .container {
     text-align: center;
+    display:block;
+    margin: 0 auto;
+    width: 100vw;
+    justify-content: center;
 }
 
 
@@ -42,6 +80,10 @@ a:hover {
     font-size: 1em;
     font-family: Arial, sans-serif;
     text-shadow: 0 0 5px #d5edff;
+  }
+
+  .snowflakes{
+    opacity: 0;
   }
   
   .snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}
@@ -118,3 +160,12 @@ a:hover {
     .snowflake:nth-of-type(10){left:25%;animation-delay:0s}
     
     .snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+
+    @keyframes shake {
+        from {
+            transform: rotate(5deg);
+        }
+        to {
+            transform: rotate(-5deg)
+        }
+    }
