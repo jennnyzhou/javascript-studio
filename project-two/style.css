@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+
 section {
     margin: 0;
     padding: 0;
@@ -100,10 +101,20 @@ img {
 
 
 .snowflake {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     color: #fff;
     font-size: 1em;
     font-family: Arial, sans-serif;
     text-shadow: 0 0 5px #d5edff;
+  }
+
+  #shadow-host-companion{
+    display:none;
   }
   
   .snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}
@@ -180,3 +191,4 @@ img {
     .snowflake:nth-of-type(10){left:25%;animation-delay:0s}
     
     .snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+
