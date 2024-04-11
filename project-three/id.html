@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dream Card</title>
+  <link rel="stylesheet" href="id.css">
+</head>
+<body>
+
+    <div class="buttons">
+
+        <div class="home">
+            <a href="index.html">
+            <button type="button">🏠</button>
+        </a>
+        </div>
+
+    <div class="specific">
+        <button type="button" class="screenshot" onclick="takeScreenshot()" title="TAKE SCREENSHOT">📷</button>
+    </div>
+    </div>
+
+<div class="card">
+    <div id="idCard">
+        
+        <div id="container">
+        <img id="userPhoto" src="" alt="User photo">
+        </div>
+        <div id="idText">
+
+            
+            <p id="name"></p>
+            <p id="bday"></p>
+            <p id="location"></p>
+            <p id="job"></p>
+            <p id="pets"></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+<script>
+    function takeScreenshot() {
+    
+    setTimeout(function () {
+        html2canvas(document.body).then(canvas => {
+           
+            var dataURL = canvas.toDataURL();
+
+            
+            var link = document.createElement('a');
+            link.href = dataURL;
+            link.download = 'screenshot.png';
+
+            
+            link.click();
+        });
+    }, 500); 
+}
+</script>
+
+</body>
+</html>
