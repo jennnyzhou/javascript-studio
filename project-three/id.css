@@ -1,0 +1,208 @@
+@import url(https://db.onlinewebfonts.com/c/51b04fd198be8867df5092074251bb22?family=Apple+Garamond+Book);
+@import url("https://use.typekit.net/pgx5bqy.css");
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(270deg, #f3dfbe, #bed6f3, #dbbef3, #e5eff2, #adcff2);
+    background-size: 1000% 1000%;
+    animation: background 30s ease infinite;
+}
+
+
+@keyframes background {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-size: 30pt;
+}
+
+
+.card{
+    width: 700px;
+    height: 500px;
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; 
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+}
+
+
+#nameInput, #bdayInput, #locationInput, #jobInput, #petsInput {
+    background: transparent;
+    border: 1px solid black;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-size: 20pt;
+}
+
+#nameInput::placeholder, #locationInput::placeholder, #jobInput::placeholder, #petsInput::placeholder {
+    color: gray;
+    font-style: italic;
+}
+
+button {
+    font-family: Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-size: 20pt;
+    background: rgb(255, 255, 183);
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 5px 20px;
+    max-width: 100%; 
+}
+
+button:hover {
+    font-family: 'Apple Garamond', serif;
+    font-style: italic;
+}
+
+#player {
+    width: 100%; 
+    height: auto;
+    /* align-items: center; */
+}
+
+#capture {
+    margin-top: 20px; 
+}
+
+#canvas {
+    display: none; 
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#idCard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+    padding: 20px; 
+}
+
+#idCard p {
+    margin: 5px 0; 
+    font-size: 15pt;
+}
+
+
+
+#container{
+    background-color: black;
+    width: 70%;
+    height: 300px;
+}
+
+#container img {
+    justify-self: center;
+}
+
+#idText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: start;
+}
+
+#info{
+    margin-top: 4vh;
+    text-align: left;
+}
+
+h2 {
+    font-family: Apple Garamond, sans-serif;
+    /* font-style: bold; */
+    font-weight: 300;
+    font-size: 60px;
+    margin: 0;
+    color: rgb(255, 255, 183);
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+    line-height: 50px;
+    text-align: left;
+    letter-spacing: -2pt;
+}
+
+/* h3 {
+    font-family: Apple Garamond, sans-serif;
+    font-style: bold;
+    font-weight: 300;
+    font-size: 60px;
+    margin: 0;
+    color: rgb(255, 255, 183);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    line-height: 60px;
+    text-align: left;
+} */
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: -1pt;
+}
+
+span {
+    font-family: "sweet-fancy-script", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 120px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.name {
+    text-align: end;
+}
+
+.specific{
+
+    position: relative;
+    top: -15vh;
+    right: 3vh;
+}
+
+.home{
+    position: relative;
+    top: -15vh;
+    left: 3vh;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}

@@ -1,0 +1,114 @@
+@import url(https://db.onlinewebfonts.com/c/51b04fd198be8867df5092074251bb22?family=Apple+Garamond+Book);
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(270deg, #f3dfbe, #bed6f3, #dbbef3, #e5eff2, #adcff2);
+    background-size: 1000% 1000%;
+    animation: background 30s ease infinite;
+}
+
+
+@keyframes background {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-size: 30pt;
+}
+
+
+.card{
+    width: 700px;
+    height: 500px;
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    display: grid;
+
+    flex-direction: column; 
+    justify-content: center;
+    align-content: center;
+    /* align-items: center; */
+}
+
+#nameInput, #bdayInput, #locationInput, #jobInput, #petsInput {
+    background: transparent;
+    border: 1px solid black;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-size: 20pt;
+    border-radius: 50px;
+    padding: 5px 20px;
+}
+
+#nameInput::placeholder, #locationInput::placeholder, #jobInput::placeholder, #petsInput::placeholder {
+    color: gray;
+    font-style: italic;
+}
+
+button {
+    font-family: Helvetica, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-size: 20pt;
+    position: relative;
+    grid-row-start: 4;
+    background: rgb(255, 255, 183);
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 5px 20px;
+    max-width: 100%; 
+    margin-top: 60px;
+}
+
+button:hover {
+    font-family: 'Apple Garamond', serif;
+    font-style: italic;
+}
+
+video {
+    width: auto;
+    height: 200%  !important;
+    
+}
+
+#player {
+    width: 200px;
+    height: 1000px;
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    object-fit: cover;
+    grid-row-start: 1;
+    /* align-items: center; */
+}
+
+#canvas {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 0px;
+    height: 100px;
+}
+
