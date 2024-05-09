@@ -10,16 +10,32 @@
 <body>
 
   <div class="card">
-  <h1> What's your occupation? </h1>
+    <h1 id="questionText"></h1><button id="random" onclick="displayRandomQuestion('job')" style="font-size: 30pt;">🔀</button>
+  
 
 <div class="answer">
 <input type="text" id="jobInput" placeholder="Type...">
 
 <a href="pets.html">
-<button onclick="saveJob()">Next</button>
+<button id="next" onclick="saveJob()">Next</button>
 </a>
 </div>
 </div>
+
+
+<script>
+  window.onload = function() {
+  displayRandomQuestion("job");
+};
+
+  var input = document.getElementById("jobInput");
+  input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("next").click();
+    }
+  });
+  </script>
 
 <script src="script.js"></script>
 </body>
