@@ -1,5 +1,6 @@
 @import url(https://db.onlinewebfonts.com/c/51b04fd198be8867df5092074251bb22?family=Apple+Garamond+Book);
 @import url("https://use.typekit.net/pgx5bqy.css");
+@import url("https://use.typekit.net/pgx5bqy.css");
 
 html, body {
     height: 100%;
@@ -7,7 +8,14 @@ html, body {
     padding: 0;
 }
 
+
+h2 {
+    --font-family: 'Apple Garamond', serif;
+    --font-size: 45pt;
+  }
+
 body {
+    font-family: Helvetica, sans-serif;
     display: flex;
     flex-direction: column; 
     justify-content: center;
@@ -20,6 +28,190 @@ body {
     animation: background 30s ease infinite;
 }
 
+body:has(input[value="Helvetica"]:checked) {
+
+    font-family: Helvetica, sans-serif;
+
+    #font-helvetica{
+        background-color:rgb(225, 225, 225);
+    }
+
+    .card {
+        background-color: #add0f200;
+    }
+
+    img {
+        border-radius: 25px; 
+    }
+
+    #container {
+        filter: blur(10px) saturate(80%);
+        width: 700px;
+        height: 500px;
+        border-radius: 25px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: rgb(225, 225, 225);
+        text-align: center;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    #idText {
+       margin-left: 15vw;
+    }
+
+    #idText p {
+        color: white;
+        line-height: 10pt;
+    }
+
+
+    #userData {
+        display: flex;
+        flex-wrap:nowrap;
+    }
+    
+    #userData p {
+        margin: 5px 10px;
+        font-size: 15pt;
+        white-space: nowrap; 
+    }
+
+
+    
+
+    
+  }
+
+  body:has(input[value="LoRes-12"]:checked) {
+    font-family: "lores-12", sans-serif;
+
+ 
+    .card {
+        background-color: rgb(0, 255, 76);
+        filter: brightness(200%);
+        filter: contrast(200%);
+    }
+    .name {
+        display: none;
+    }
+
+    #idText p{
+        text-transform: uppercase;
+        letter-spacing: 0;
+    }
+
+    #font-lores{
+        background-color:rgb(225, 225, 225);
+    }
+
+    h2 {
+        color: black;
+        font-size: 45pt;
+    }
+ 
+  }
+  body:has(input[value="Apple Garamond"]:checked) {
+    
+    font-family: 'Apple Garamond', serif;
+    
+        #idText p{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+         align-items: center; 
+         color: red;
+         font-size: 20pt;
+         line-height: 20pt;
+         -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+        }
+
+    .card {
+
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        font-size: 80pt;
+
+       
+
+
+        .info {
+            font-size: 70pt;
+        }
+
+        .title {
+            padding-left: 2vw;
+        }
+
+        h2 {
+            font-size: 60pt;
+            color: red;
+        }
+
+        span {
+            font-size: 100pt;
+            color: red;
+        }
+
+        img {
+            border-radius: 25px; 
+        }
+        #container {
+            filter: grayscale(100%);
+            width: 700px;
+            height: 500px;
+            border-radius: 25px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgb(225, 225, 225);
+            text-align: center;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    #font-garamond{
+        background-color:rgb(225, 225, 225);
+    }
+
+  }
+  body:has(input[value="Comic Sans"]:checked) {
+
+    h2{
+    font-size: 45pt;
+    }
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+    .card {
+        background: linear-gradient( 89.7deg, rgba(223,0,0,1) 2.7%, rgba(214,91,0,1) 15.1%, rgba(233,245,0,1) 29.5%, rgba(23,255,17,1) 45.8%, rgba(29,255,255,1) 61.5%, rgba(5,17,255,1) 76.4%, rgba(202,0,253,1) 92.4% );
+    }
+
+    #font-comic-sans{
+        background-color:rgb(225, 225, 225);
+    }
+
+    #container {
+        filter: saturate(200%);
+    }
+
+    #idText p {
+        font-size: 14pt;
+    }
+}
+
+
+
 
 @keyframes background {
     0% { background-position: 0% 50%; }
@@ -28,7 +220,7 @@ body {
 }
 
 h1 {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Apple Garamond', serif;
     letter-spacing: -1px;
     font-weight: 400;
     font-size: 30pt;
@@ -45,15 +237,15 @@ h1 {
     text-align: center;
     display: flex; /* Make it a flex container */
     flex-direction: column; 
-    justify-content: center; /* Center children horizontally */
-    align-items: center; /* Center children vertically */
+    justify-content: center; 
+    align-items: center; 
 }
 
 
 #nameInput, #bdayInput, #locationInput, #jobInput, #petsInput {
     background: transparent;
     border: 1px solid black;
-    font-family: Helvetica, sans-serif;
+    font-family: var(--font-family);
     letter-spacing: -1px;
     font-weight: 400;
     font-size: 20pt;
@@ -64,7 +256,7 @@ h1 {
     font-style: italic;
 }
 
-button {
+button, label {
     font-family: Helvetica, sans-serif;
     letter-spacing: -1px;
     font-weight: 400;
@@ -74,12 +266,24 @@ button {
     border-radius: 50px;
     padding: 5px 20px;
     max-width: 100%; 
+    cursor:pointer;
 }
 
-button:hover {
+.styles {
+    position: relative;
+    top: -14vh;
+}
+
+
+input[type="radio"] {
+    display: none; 
+  }
+
+
+/* button:hover {
     font-family: 'Apple Garamond', serif;
     font-style: italic;
-}
+} */
 
 #player {
     width: 100%; 
@@ -98,6 +302,7 @@ button:hover {
 
 
 .card {
+    font-family: var(--font-family);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,6 +310,7 @@ button:hover {
 }
 
 #idCard {
+    font-family: var(--font-family);
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto;
@@ -142,10 +348,11 @@ button:hover {
 }
 
 h2 {
-    font-family: Apple Garamond, sans-serif;
+    /* font-family: Apple Garamond, sans-serif; */
+    font-family: var(--font-family);
     /* font-style: bold; */
     font-weight: 300;
-    font-size: 60px;
+    font-size: 50px;
     margin: 0;
     color: rgb(255, 255, 183);
     -webkit-text-stroke-width: 0.7px;
@@ -153,6 +360,7 @@ h2 {
     line-height: 50px;
     text-align: left;
     letter-spacing: -2pt;
+
 }
 
 /* h3 {
@@ -169,7 +377,7 @@ h2 {
 } */
 
 p {
-    font-family: Helvetica, sans-serif;
+   font-family: var(--font-family);
     font-weight: 400;
     letter-spacing: -1pt;
 }
@@ -188,7 +396,6 @@ span {
 }
 
 .specific{
-
     position: relative;
     top: -15vh;
     right: 3vh;
@@ -206,3 +413,4 @@ span {
     width: 100%;
 
 }
+

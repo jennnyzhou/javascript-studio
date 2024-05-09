@@ -17,10 +17,27 @@
         </a>
         </div>
 
-    <div class="specific">
-        <button type="button" class="screenshot" onclick="takeScreenshot()" title="TAKE SCREENSHOT">📷</button>
-    </div>
-    </div>
+
+
+    <div class="styles">
+        <input type="radio" id="font-helvetica" name="font" value="Helvetica">
+        <label id="font-helvetica" for="font-helvetica" onclick="selectFont('Helvetica')">🍎</label>
+    
+        <input type="radio" id="font-lores" name="font" value="LoRes-12">
+        <label id="font-lores" for="font-lores" onclick="selectFont('LoRes-12')">🛸</label>
+    
+        <input type="radio" id="font-garamond" name="font" value="Apple Garamond">
+        <label id="font-garamond" for="font-garamond" onclick="selectFont('Apple Garamond')">💋</label>
+    
+        <input type="radio" id="font-comic-sans" name="font" value="Comic Sans">
+        <label id="font-comic-sans" for="font-comic-sans" onclick="selectFont('Comic Sans')">👩‍🎤</label>
+  </div>
+
+  <div class="specific">
+    <button type="button" class="screenshot" onclick="takeScreenshot()" title="TAKE SCREENSHOT">📷</button>
+</div>
+
+</div>
 
 <div class="card">
     <div id="idCard">
@@ -30,12 +47,8 @@
         </div>
         <div id="idText">
 
-            
-            <p id="name"></p>
-            <p id="bday"></p>
-            <p id="location"></p>
-            <p id="job"></p>
-            <p id="pets"></p>
+            <div class="title"></div>
+            <div id="userData"></div>
         </div>
     </div>
 </div>
@@ -43,23 +56,21 @@
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script src="script.js"></script>
 <script>
-    function takeScreenshot() {
-    
+function takeScreenshot() {
     setTimeout(function () {
-        html2canvas(document.body).then(canvas => {
-           
+        html2canvas(document.querySelector('.card')).then(canvas => {
             var dataURL = canvas.toDataURL();
-
-            
             var link = document.createElement('a');
             link.href = dataURL;
             link.download = 'screenshot.png';
-
-            
             link.click();
         });
-    }, 500); 
+    }, 500);
 }
+
+
+
+
 </script>
 
 </body>
