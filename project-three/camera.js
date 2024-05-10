@@ -24,5 +24,5 @@ captureButton.addEventListener('click', () => {
     localStorage.setItem('capturedPhotoData', canvas.toDataURL('image/jpeg'));
     
     // Redirect to the next page (id.html)
-    window.location.href = 'id.html';
+    window.location.href = 'load.html';
 });
